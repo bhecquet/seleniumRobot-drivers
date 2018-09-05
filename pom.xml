@@ -88,21 +88,8 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<pluginManagement>
-				<plugins>
-					<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5.2</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.apache.maven.scm</groupId>
-							<artifactId>maven-scm-provider-gitexe</artifactId>
-							<version>1.8.1</version>
-						</dependency>
-					</dependencies>
-					<configuration>
-						<autoVersionSubmodules>true</autoVersionSubmodules>
-					</configuration>
-				</plugin>
+			<plugins>
+					
 				<plugin>
 					<groupId>com.googlecode.maven-download-plugin</groupId>
 					<artifactId>download-maven-plugin</artifactId>
@@ -296,17 +283,7 @@
 						</execution>
 					</executions>
 				</plugin>
-				<plugin>
-				     	<groupId>org.sonatype.plugins</groupId>
-				        <artifactId>nexus-staging-maven-plugin</artifactId>
-				        <version>1.6.3</version>
-				        <extensions>true</extensions>
-				        <configuration>
-				        	<serverId>ossrh</serverId>
-				        	<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-				        	<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				        </configuration>
-				</plugin>
+				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -396,28 +373,55 @@
 				        </execution>
 				    </executions>
 				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.5</version>
-					<executions>
-						<execution>
-							<id>sign-artifacts</id>
-							<phase>verify</phase>
-							<goals>
-								<goal>sign</goal>
-							</goals>
-							<configuration>
-								<keyname>${gpg.keyname}</keyname>
-								<passphraseServerId>${gpg.keyname}</passphraseServerId>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
+				
 			</plugins>
 			
 		</pluginManagement>
-
+		<plugins>
+			<plugin>
+		     	<groupId>org.sonatype.plugins</groupId>
+		        <artifactId>nexus-staging-maven-plugin</artifactId>
+		        <version>1.6.3</version>
+		        <extensions>true</extensions>
+		        <configuration>
+		        	<serverId>ossrh</serverId>
+		        	<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+		        	<autoReleaseAfterClose>true</autoReleaseAfterClose>
+		        </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<keyname>${gpg.keyname}</keyname>
+							<passphraseServerId>${gpg.keyname}</passphraseServerId>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
