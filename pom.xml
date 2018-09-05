@@ -324,6 +324,7 @@
 							<goals>
 								<goal>regex-property</goal>
 							</goals>
+							<phase>generate-sources</phase>
 							<configuration>
 	
 								<name>selenium.version.short</name>
