@@ -276,7 +276,7 @@
 					</configuration>
 					<executions>
 						<execution>
-							<id>jar</id>
+							<id>default-jar</id>
 							<goals>
 								<goal>jar</goal>
 							</goals>
