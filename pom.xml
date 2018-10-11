@@ -101,7 +101,18 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-                                                <execution>
+                        <execution>
+							<id>chromedriver 2.42</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/2.42/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.42_chrome-68-70</outputDirectory>
+							</configuration>
+                        </execution>	
+                        <execution>
 							<id>chromedriver 2.41</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -111,8 +122,8 @@
 								<url>${chromedriver.url}/2.41/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.41_chrome-67-69</outputDirectory>
 							</configuration>
-                                                </execution>	
-                                                <execution>
+                        </execution>	
+                        <execution>
 							<id>chromedriver 2.38</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -181,13 +192,13 @@
 
 						<!-- GECKODRIVER -->
 						<execution>
-							<id>geckodriver 0.21.0</id>
+							<id>geckodriver 0.23.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${geckodriver.url}/v0.21.0/geckodriver-v0.21.0-${geckodriver.suffix}${geckodriver.ext}</url>
+								<url>${geckodriver.url}/v0.23.0/geckodriver-v0.23.0-${geckodriver.suffix}${geckodriver.ext}</url>
 								<outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
 							</configuration>
 						</execution>
