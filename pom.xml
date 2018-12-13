@@ -3,7 +3,7 @@
 	 <groupId>com.infotel.seleniumRobot</groupId>
 	<artifactId>seleniumRobot-drivers</artifactId>
 	<packaging>pom</packaging>
-	<version>4.0.1-SNAPSHOT</version>
+	<version>4.0.4-SNAPSHOT</version>
 	
 	<name>seleniumRobot drivers</name>
 	<description>Drivers which must be deployed with seleniumRobot core or with seleniumRobot grid</description>
@@ -88,21 +88,8 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<pluginManagement>
-				<plugins>
-					<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5.2</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.apache.maven.scm</groupId>
-							<artifactId>maven-scm-provider-gitexe</artifactId>
-							<version>1.8.1</version>
-						</dependency>
-					</dependencies>
-					<configuration>
-						<autoVersionSubmodules>true</autoVersionSubmodules>
-					</configuration>
-				</plugin>
+			<plugins>
+					
 				<plugin>
 					<groupId>com.googlecode.maven-download-plugin</groupId>
 					<artifactId>download-maven-plugin</artifactId>
@@ -115,19 +102,8 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
                         <execution>
-							<id>chromedriver 2.45</id>
-							<phase>process-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/2.45/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.45_chrome-70-72</outputDirectory>
-							</configuration>
-                        </execution>	
-                        <execution>
 							<id>chromedriver 2.42</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -137,8 +113,19 @@
 							</configuration>
                         </execution>	
                         <execution>
+							<id>chromedriver 2.41</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/2.41/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.41_chrome-67-69</outputDirectory>
+							</configuration>
+                        </execution>	
+                        <execution>
 							<id>chromedriver 2.38</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -149,7 +136,7 @@
 						</execution>
 						<execution>
 							<id>chromedriver 2.35</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -160,7 +147,7 @@
 						</execution>
 						<execution>
 							<id>chromedriver 2.33</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -171,7 +158,7 @@
 						</execution>
 						<execution>
 							<id>chromedriver 2.31</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -182,7 +169,7 @@
 						</execution>
 						<execution>
 							<id>chromedriver 2.29</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -193,7 +180,7 @@
 						</execution>
 						<execution>
 							<id>chromedriver 2.20</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -205,13 +192,13 @@
 
 						<!-- GECKODRIVER -->
 						<execution>
-							<id>geckodriver 0.21.0</id>
-							<phase>process-resources</phase>
+							<id>geckodriver 0.23.0</id>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${geckodriver.url}/v0.21.0/geckodriver-v0.21.0-${geckodriver.suffix}${geckodriver.ext}</url>
+								<url>${geckodriver.url}/v0.23.0/geckodriver-v0.23.0-${geckodriver.suffix}${geckodriver.ext}</url>
 								<outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
 							</configuration>
 						</execution>
@@ -219,7 +206,7 @@
 						<!-- IEDriverServer -->
 						<execution>
 							<id>IEDriverServer 64</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -232,7 +219,7 @@
 						</execution>
 						<execution>
 							<id>IEDriverServer 32</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -246,7 +233,7 @@
 						<!-- Edge driver -->
 						<execution>
 							<id>Edge driver 16299</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -259,7 +246,7 @@
 						</execution>
 						<execution>
 							<id>Edge driver 15063</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -272,7 +259,7 @@
 						</execution>
 						<execution>
 							<id>Edge driver 14393</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -300,28 +287,27 @@
 					</configuration>
 					<executions>
 						<execution>
-							<id>jar</id>
+							<id>default-jar</id>
 							<goals>
 								<goal>jar</goal>
 							</goals>
 						</execution>
 					</executions>
 				</plugin>
-				<plugin>
-				     	<groupId>org.sonatype.plugins</groupId>
-				        <artifactId>nexus-staging-maven-plugin</artifactId>
-				        <version>1.6.3</version>
-				        <extensions>true</extensions>
-				        <configuration>
-				        	<serverId>ossrh</serverId>
-				        	<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-				        	<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				        </configuration>
-				</plugin>
+				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.5.1</version>
+					<executions>
+						<execution>
+							<id>default-compile</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+					</executions>
 					<configuration>
 						<encoding>utf-8</encoding>
 						<source>1.8</source>
@@ -334,7 +320,7 @@
 					<version>1.6.0</version>
 					<executions>
 						<execution>
-							<phase>compile</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>java</goal>
 							</goals>
@@ -358,6 +344,7 @@
 							<goals>
 								<goal>regex-property</goal>
 							</goals>
+							<phase>generate-sources</phase>
 							<configuration>
 	
 								<name>selenium.version.short</name>
@@ -408,27 +395,69 @@
 				    </executions>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.5</version>
-					<executions>
-						<execution>
-							<id>sign-artifacts</id>
-							<phase>verify</phase>
-							<goals>
-								<goal>sign</goal>
-							</goals>
-							<configuration>
-								<keyname>${gpg.keyname}</keyname>
-								<passphraseServerId>${gpg.keyname}</passphraseServerId>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
+			        <groupId>org.apache.maven.plugins</groupId>
+			        <artifactId>maven-source-plugin</artifactId>
+			        <version>3.0.1</version>
+			        <executions>
+			          <execution>
+			            <id>attach-sources</id>
+			            <goals>
+			              <goal>jar</goal>
+			            </goals>
+			            <configuration>
+			            	<excludeResources>true</excludeResources>
+			            </configuration>
+			          </execution>
+			        </executions>
+			      </plugin>
 			</plugins>
 			
 		</pluginManagement>
-
+		<plugins>
+			<plugin>
+		     	<groupId>org.sonatype.plugins</groupId>
+		        <artifactId>nexus-staging-maven-plugin</artifactId>
+		        <version>1.6.3</version>
+		        <extensions>true</extensions>
+		        <configuration>
+		        	<serverId>ossrh</serverId>
+		        	<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+		        	<autoReleaseAfterClose>true</autoReleaseAfterClose>
+		        </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<keyname>${gpg.keyname}</keyname>
+							<passphraseServerId>${gpg.keyname}</passphraseServerId>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
