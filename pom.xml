@@ -101,6 +101,17 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
+                         <execution>
+							<id>chromedriver 2.45</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/2.45/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.45_chrome-70-72</outputDirectory>
+							</configuration>
+                        </execution>	
                         <execution>
 							<id>chromedriver 2.42</id>
 							<phase>generate-resources</phase>
@@ -110,17 +121,6 @@
 							<configuration>
 								<url>${chromedriver.url}/2.42/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.42_chrome-68-70</outputDirectory>
-							</configuration>
-                        </execution>	
-                        <execution>
-							<id>chromedriver 2.41</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/2.41/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.41_chrome-67-69</outputDirectory>
 							</configuration>
                         </execution>	
                         <execution>
