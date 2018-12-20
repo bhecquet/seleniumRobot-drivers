@@ -103,7 +103,7 @@
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
                          <execution>
 							<id>chromedriver 2.45</id>
-							<phase>process-resources</phase>
+							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
@@ -231,6 +231,19 @@
 						</execution>
 						
 						<!-- Edge driver -->
+						<execution>
+							<id>Edge driver 17134</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<skip>${is.not.windows}</skip>
+								<url>${edgedriver.url}/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe</url>
+								<outputDirectory>${driver.path}${os}/dir_MicrosoftWebDriver_17134</outputDirectory>
+								<unpack>false</unpack>
+							</configuration>
+						</execution>
 						<execution>
 							<id>Edge driver 16299</id>
 							<phase>generate-resources</phase>
