@@ -102,6 +102,17 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
                          <execution>
+							<id>chromedriver 2.46</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/2.46/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.46_chrome-71-73</outputDirectory>
+							</configuration>
+                        </execution>	
+                         <execution>
 							<id>chromedriver 2.45</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -192,13 +203,13 @@
 
 						<!-- GECKODRIVER -->
 						<execution>
-							<id>geckodriver 0.23.0</id>
+							<id>geckodriver 0.24.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${geckodriver.url}/v0.23.0/geckodriver-v0.23.0-${geckodriver.suffix}${geckodriver.ext}</url>
+								<url>${geckodriver.url}/v0.24.0/geckodriver-v0.24.0-${geckodriver.suffix}${geckodriver.ext}</url>
 								<outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
 							</configuration>
 						</execution>
