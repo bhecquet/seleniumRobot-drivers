@@ -102,6 +102,17 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
                          <execution>
+							<id>chromedriver 73.0</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/73.0.3683.20/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_73.0_chrome-73-73</outputDirectory>
+							</configuration>
+                        </execution>	
+                         <execution>
 							<id>chromedriver 2.46</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -224,7 +235,7 @@
 							<configuration>
 								<skip>${is.not.windows}</skip>
 								<!-- <url>${iedriver.url}/${selenium.version.short}/IEDriverServer_x64_${selenium.version.short}.0.zip</url>-->
-								<url>${iedriver.url}/3.14/IEDriverServer_x64_3.14.0.zip</url>
+								<url>${iedriver.url}/3.141/IEDriverServer_x64_3.141.5.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_IEDriverServer_x64</outputDirectory>
 							</configuration>
 						</execution>
@@ -236,7 +247,7 @@
 							</goals>
 							<configuration>
 								<skip>${is.not.windows}</skip>
-								<url>${iedriver.url}/3.14/IEDriverServer_Win32_3.14.0.zip</url>
+								<url>${iedriver.url}/3.141/IEDriverServer_Win32_3.141.5.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_IEDriverServer_Win32</outputDirectory>
 							</configuration>
 						</execution>
