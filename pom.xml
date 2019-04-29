@@ -102,7 +102,7 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-                        <!-- <execution>
+                        <execution>
 							<id>chromedriver 74.0</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -178,7 +178,7 @@
 								<url>${chromedriver.url}/2.29/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.29_chrome-56-58_android-7.0</outputDirectory>
 							</configuration>
-						</execution>-->
+						</execution>
 						
 
 						<!-- GECKODRIVER -->
