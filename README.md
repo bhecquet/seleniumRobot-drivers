@@ -5,4 +5,7 @@ From seleniumRobot version >= 4.x, drivers will not be provided with code, follo
 The drawback is that it's now necessary to deploy drivers AND code
 
 List of drivers to download is specified in pom.xml
-Il you want to provide custom drivers (not the ones downloaded from internet), place them, in `selenium-<os>-driver/custom` folder, they will automatically be taken into account
+If you want to provide custom drivers (not the ones downloaded from internet), 
+- place them, in `selenium-<os>-driver/custom` folder
+- execute the maven command with `-Dskip.custom.driver=false`
+they will automatically be taken into account
