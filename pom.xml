@@ -101,7 +101,7 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-                                                <execution>
+                        <execution>
 							<id>chromedriver 74.0</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -111,8 +111,8 @@
 								<url>${chromedriver.url}/74.0.3729.6/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_74.0_chrome-74-74</outputDirectory>
 							</configuration>
-                                                </execution>
-                                            <execution>
+                        </execution>
+                        <execution>
 							<id>chromedriver 73.0</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -122,8 +122,8 @@
 								<url>${chromedriver.url}/73.0.3683.68/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_73.0_chrome-73-73</outputDirectory>
 							</configuration>
-                                                </execution>	
-                                                <execution>
+                         </execution>	
+                         <execution>
 							<id>chromedriver 2.46</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -273,6 +273,41 @@
 								<unpack>false</unpack>
 							</configuration>
 						</execution>						
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+					<executions>
+						<execution>
+							<id>default-resources</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>resources</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>default-testResources</id>
+							<phase>process-test-resources</phase>
+							<goals>
+								<goal>testResources</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>copy-custom-drivers</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${driver.path}${os}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${project.basedir}/custom</directory>
+									</resource>
+								</resources>
+							</configuration>            
+						</execution>
 					</executions>
 				</plugin>
 				<plugin>
