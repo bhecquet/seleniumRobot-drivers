@@ -68,6 +68,7 @@
 		<geckodriver.suffix />
 		<geckodriver.ext />
 		<skip.clean.driver>false</skip.clean.driver>
+		<skip.custom.driver>true</skip.custom.driver>
 		<selenium.version>3.14.0</selenium.version>
 	</properties>
 
@@ -101,7 +102,7 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-                        <execution>
+                        <!-- <execution>
 							<id>chromedriver 74.0</id>
 							<phase>generate-resources</phase>
 							<goals>
@@ -177,7 +178,7 @@
 								<url>${chromedriver.url}/2.29/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.29_chrome-56-58_android-7.0</outputDirectory>
 							</configuration>
-						</execution>
+						</execution>-->
 						
 
 						<!-- GECKODRIVER -->
@@ -277,7 +278,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.7</version>
+					<version>3.1.0</version>
 					<executions>
 						<execution>
 							<id>default-resources</id>
@@ -300,6 +301,7 @@
 								<goal>copy-resources</goal>
 							</goals>
 							<configuration>
+								<skip>${skip.custom.driver}</skip>
 								<outputDirectory>${driver.path}${os}</outputDirectory>
 								<resources>
 									<resource>
