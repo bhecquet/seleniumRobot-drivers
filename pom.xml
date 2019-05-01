@@ -287,6 +287,7 @@
 								<goal>copy-resources</goal>
 							</goals>
 							<configuration>
+                                                            <overwrite>true</overwrite>
 								<skip>${skip.custom.driver}</skip>
 								<outputDirectory>${driver.path}${os}</outputDirectory>
 								<resources>
