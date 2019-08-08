@@ -103,13 +103,24 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
                         <execution>
+							<id>chromedriver 77.0</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/77.0.3865.10/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_77.0_chrome-77-77</outputDirectory>
+							</configuration>
+                        </execution>
+                        <execution>
 							<id>chromedriver 76.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${chromedriver.url}/76.0.3809.25/chromedriver_${chromedriver.suffix}.zip</url>
+								<url>${chromedriver.url}/76.0.3809.68/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_76.0_chrome-76-76</outputDirectory>
 							</configuration>
                         </execution>
