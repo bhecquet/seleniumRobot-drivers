@@ -102,17 +102,8 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-                        <execution>
-							<id>chromedriver 77.0</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/77.0.3865.40/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_77.0_chrome-77-77</outputDirectory>
-							</configuration>
-                        </execution>
+						
+						<!-- Chromedriver 77.0 (77.0.3865.40) does not work with Salesforce: https://bugs.chromium.org/p/chromedriver/issues/detail?id=3103 -->
                         <execution>
 							<id>chromedriver 76.0</id>
 							<phase>generate-resources</phase>
@@ -121,7 +112,7 @@
 							</goals>
 							<configuration>
 								<url>${chromedriver.url}/76.0.3809.126/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_76.0_chrome-76-76</outputDirectory>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_76.0_chrome-76-77</outputDirectory>
 							</configuration>
                         </execution>
                         <execution>
