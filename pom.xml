@@ -105,6 +105,17 @@
 						
 						<!-- Chromedriver 77.0 (77.0.3865.40) does not work with Salesforce: https://bugs.chromium.org/p/chromedriver/issues/detail?id=3103 -->
                         <execution>
+							<id>chromedriver 78.0</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/78.0.3904.11/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_78.0_chrome-78-78</outputDirectory>
+							</configuration>
+                        </execution>
+                        <execution>
 							<id>chromedriver 76.0</id>
 							<phase>generate-resources</phase>
 							<goals>
