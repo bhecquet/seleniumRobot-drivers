@@ -3,7 +3,7 @@
 	 <groupId>com.infotel.seleniumRobot</groupId>
 	<artifactId>seleniumRobot-drivers</artifactId>
 	<packaging>pom</packaging>
-	<version>4.0.23-SNAPSHOT</version>
+	<version>4.0.25-SNAPSHOT</version>
 	
 	<name>seleniumRobot drivers</name>
 	<description>Drivers which must be deployed with seleniumRobot core or with seleniumRobot grid</description>
@@ -122,7 +122,7 @@
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${chromedriver.url}/78.0.3904.70/chromedriver_${chromedriver.suffix}.zip</url>
+								<url>${chromedriver.url}/78.0.3904.105/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_78.0_chrome-78-78</outputDirectory>
 							</configuration>
                         </execution>
