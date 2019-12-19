@@ -111,7 +111,7 @@
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${chromedriver.url}/79.0.3945.16/chromedriver_${chromedriver.suffix}.zip</url>
+								<url>${chromedriver.url}/79.0.3945.36/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_79.0_chrome-79-79</outputDirectory>
 							</configuration>
                         </execution>
