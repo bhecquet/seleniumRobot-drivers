@@ -102,8 +102,19 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-						                        <execution>
-						<id>chromedriver 84.0</id>
+						<execution>
+							<id>chromedriver 85.0</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/85.0.4183.83/chromedriver_${chromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_85.0_chrome-85-85</outputDirectory>
+							</configuration>
+                        </execution>
+                        <execution>
+							<id>chromedriver 84.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
@@ -167,28 +178,6 @@
 							<configuration>
 								<url>${chromedriver.url}/78.0.3904.105/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_78.0_chrome-78-78</outputDirectory>
-							</configuration>
-                        </execution>
-                        <execution>
-							<id>chromedriver 76.0</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/76.0.3809.126/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_76.0_chrome-76-77</outputDirectory>
-							</configuration>
-                        </execution>
-                         <execution>
-							<id>chromedriver 2.46</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/2.46/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_2.46_chrome-71-73</outputDirectory>
 							</configuration>
                         </execution>	
 						<execution>
