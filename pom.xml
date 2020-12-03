@@ -206,13 +206,13 @@
 
 						<!-- GECKODRIVER -->
 						<execution>
-							<id>geckodriver 0.24.0</id>
+							<id>geckodriver 0.28.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${geckodriver.url}/v0.24.0/geckodriver-v0.24.0-${geckodriver.suffix}${geckodriver.ext}</url>
+								<url>${geckodriver.url}/v0.28.0/geckodriver-v0.28.0-${geckodriver.suffix}${geckodriver.ext}</url>
 								<outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
 							</configuration>
 						</execution>
