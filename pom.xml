@@ -63,7 +63,7 @@
 		<chromedriver.url>https://chromedriver.storage.googleapis.com</chromedriver.url>
 		<geckodriver.url>https://github.com/mozilla/geckodriver/releases/download</geckodriver.url>
 		<iedriver.url>http://selenium-release.storage.googleapis.com</iedriver.url>
-		<edgedriver.url>https://download.microsoft.com/download</edgedriver.url>
+		<edgedriver.url>https://msedgedriver.azureedge.net</edgedriver.url>
 		<chromedriver.suffix />
 		<geckodriver.suffix />
 		<geckodriver.ext />
@@ -256,57 +256,29 @@
 						
 						<!-- Edge driver -->
 						<execution>
-							<id>Edge driver 17134</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<skip>${is.not.windows}</skip>
-								<url>${edgedriver.url}/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe</url>
-								<outputDirectory>${driver.path}${os}/dir_MicrosoftWebDriver_17134</outputDirectory>
-								<unpack>false</unpack>
-							</configuration>
-						</execution>
+                            <id>edgedriver 93.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/93.0.961.27/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_93.0_edge-93-94</outputDirectory>
+                            </configuration>
+                        </execution>						
 						<execution>
-							<id>Edge driver 16299</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<skip>${is.not.windows}</skip>
-								<url>${edgedriver.url}/D/4/1/D417998A-58EE-4EFE-A7CC-39EF9E020768/MicrosoftWebDriver.exe</url>
-								<outputDirectory>${driver.path}${os}/dir_MicrosoftWebDriver_16299</outputDirectory>
-								<unpack>false</unpack>
-							</configuration>
-						</execution>
-						<execution>
-							<id>Edge driver 15063</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<skip>${is.not.windows}</skip>
-								<url>${edgedriver.url}/3/4/2/342316D7-EBE0-4F10-ABA2-AE8E0CDF36DD/MicrosoftWebDriver.exe</url>
-								<outputDirectory>${driver.path}${os}/dir_MicrosoftWebDriver_15063</outputDirectory>
-								<unpack>false</unpack>
-							</configuration>
-						</execution>
-						<execution>
-							<id>Edge driver 14393</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<skip>${is.not.windows}</skip>
-								<url>${edgedriver.url}/3/2/D/32D3E464-F2EF-490F-841B-05D53C848D15/MicrosoftWebDriver.exe</url>
-								<outputDirectory>${driver.path}${os}/dir_MicrosoftWebDriver_14393</outputDirectory>
-								<unpack>false</unpack>
-							</configuration>
-						</execution>						
+                            <id>edgedriver 92.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/92.0.902.78/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_92.0_edge-92-93</outputDirectory>
+                            </configuration>
+                        </execution>						
 					</executions>
 				</plugin>
 				<plugin>
@@ -320,7 +292,7 @@
 								<goal>copy-resources</goal>
 							</goals>
 							<configuration>
-                                                            <overwrite>true</overwrite>
+                                <overwrite>true</overwrite>
 								<skip>${skip.custom.driver}</skip>
 								<outputDirectory>${driver.path}${os}</outputDirectory>
 								<resources>
@@ -398,6 +370,7 @@
 						<arguments>
 							<argument>${driver.path}</argument>
 							<argument>${os}</argument>
+							<argument>${skip.clean.driver}</argument>
 						</arguments>
 					</configuration>
 				</plugin>

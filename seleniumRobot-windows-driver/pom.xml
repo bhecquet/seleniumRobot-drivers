@@ -11,6 +11,7 @@
 		<os>windows</os>
 		<is.not.windows>false</is.not.windows>
 		<chromedriver.suffix>win32</chromedriver.suffix>
+		<edgedriver.suffix>win64</edgedriver.suffix>
 		<geckodriver.suffix>win64</geckodriver.suffix>
 		<geckodriver.ext>.zip</geckodriver.ext>
 		<skip.clean.driver>true</skip.clean.driver>
