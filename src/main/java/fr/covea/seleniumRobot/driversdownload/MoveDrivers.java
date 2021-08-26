@@ -15,10 +15,22 @@ public class MoveDrivers {
 		
 		String root = args[0]; // /someRoot/drivers/
 		String os = args[1];
+		String skipCleanDriver = args[2];
 		
 		String extension = "";
 		if (os.equals("windows")) {
 			extension = ".exe";
+		}
+		
+		// delete old drivers
+		if ("false".equals(skipCleanDriver)) {
+			for (String driverDir: new File(root + os).list()) {
+				File file = Paths.get(root, os, driverDir).toFile();
+				if (!file.isDirectory()) {
+					System.out.println("deleting driver " + file);
+					FileUtils.forceDelete(file);
+				}
+			}
 		}
 		
 		for (String driverDir: new File(root + os).list()) {
@@ -43,9 +55,9 @@ public class MoveDrivers {
 						StandardCopyOption.REPLACE_EXISTING);
 				FileUtils.deleteDirectory(Paths.get(root, os, driverDir).toFile());
 			}
-			else if (driverDir.contains("MicrosoftWebDriver") && Paths.get(root, os, driverDir).toFile().isDirectory()) {
+			else if (driverDir.contains("edgedriver") && Paths.get(root, os, driverDir).toFile().isDirectory()) {
 				System.out.println("moving driver " + driverDir);
-				Files.copy(Paths.get(root, os, driverDir, "MicrosoftWebDriver" + extension), 
+				Files.copy(Paths.get(root, os, driverDir, "msedgedriver" + extension), 
 						Paths.get(root, os, driverDir.replace("dir_", "") + extension), 
 						StandardCopyOption.REPLACE_EXISTING);
 				FileUtils.deleteDirectory(Paths.get(root, os, driverDir).toFile());
