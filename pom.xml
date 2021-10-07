@@ -256,6 +256,18 @@
 						
 						<!-- Edge driver -->
 						<execution>
+                            <id>edgedriver 95.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/95.0.1020.9/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_95.0_edge-95-96</outputDirectory>
+                            </configuration>
+                        </execution>    
+						<execution>
                             <id>edgedriver 93.0</id>
                             <phase>generate-resources</phase>
                             <goals>
