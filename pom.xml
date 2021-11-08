@@ -109,7 +109,7 @@
                                 <goal>wget</goal>
                             </goals>
                             <configuration>
-                                <url>${chromedriver.url}/96.0.4664.18/chromedriver_${chromedriver.suffix}.zip</url>
+                                <url>${chromedriver.url}/96.0.4664.35/chromedriver_${chromedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_chromedriver_96.0_chrome-96-97</outputDirectory>
                             </configuration>
                         </execution>
