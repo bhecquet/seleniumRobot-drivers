@@ -103,6 +103,17 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
 						<execution>
+                            <id>chromedriver 98.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <url>${chromedriver.url}/98.0.4758.48/chromedriver_${chromedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_chromedriver_98.0_chrome-98-99</outputDirectory>
+                            </configuration>
+                        </execution>
+						<execution>
                             <id>chromedriver 97.0</id>
                             <phase>generate-resources</phase>
                             <goals>
@@ -188,17 +199,6 @@
 							<configuration>
 								<url>${chromedriver.url}/90.0.4430.24/chromedriver_${chromedriver.suffix}.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_90.0_chrome-90-91</outputDirectory>
-							</configuration>
-                        </execution>
-						<execution>
-							<id>chromedriver 89.0</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/89.0.4389.23/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_89.0_chrome-89-90</outputDirectory>
 							</configuration>
                         </execution>
 						<execution>
