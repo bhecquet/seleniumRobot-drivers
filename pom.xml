@@ -109,7 +109,7 @@
                                 <goal>wget</goal>
                             </goals>
                             <configuration>
-                                <url>${chromedriver.url}/99.0.4844.17/chromedriver_${chromedriver.suffix}.zip</url>
+                                <url>${chromedriver.url}/99.0.4844.35/chromedriver_${chromedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_chromedriver_99.0_chrome-99-100</outputDirectory>
                             </configuration>
                         </execution>
@@ -244,6 +244,18 @@
 						</execution>
 						
 						<!-- Edge driver -->
+						<execution>
+                            <id>edgedriver 99.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/99.0.1150.16/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_99.0_edge-99-100</outputDirectory>
+                            </configuration>
+                        </execution>    
 						<execution>
                             <id>edgedriver 98.0</id>
                             <phase>generate-resources</phase>
