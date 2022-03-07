@@ -103,6 +103,17 @@
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
 						<execution>
+                            <id>chromedriver 100.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <url>${chromedriver.url}/99.0.4844.35/chromedriver_${chromedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_chromedriver_100.0_chrome-100-101</outputDirectory>
+                            </configuration>
+                        </execution>
+						<execution>
                             <id>chromedriver 99.0</id>
                             <phase>generate-resources</phase>
                             <goals>
@@ -190,17 +201,6 @@
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_92.0_chrome-92-93</outputDirectory>
 							</configuration>
                         </execution>
-						<execution>
-							<id>chromedriver 91.0</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/91.0.4472.19/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_91.0_chrome-91-92</outputDirectory>
-							</configuration>
-                        </execution>
 						
 
 						<!-- GECKODRIVER -->
@@ -252,7 +252,7 @@
                             </goals>
                             <configuration>
                                 <skip>${is.not.windows}</skip>
-                                <url>${edgedriver.url}/99.0.1150.16/edgedriver_${edgedriver.suffix}.zip</url>
+                                <url>${edgedriver.url}/99.0.1150.30/edgedriver_${edgedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_edgedriver_99.0_edge-99-100</outputDirectory>
                             </configuration>
                         </execution>    
