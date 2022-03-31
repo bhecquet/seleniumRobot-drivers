@@ -109,7 +109,7 @@
                                 <goal>wget</goal>
                             </goals>
                             <configuration>
-                                <url>${chromedriver.url}/99.0.4844.35/chromedriver_${chromedriver.suffix}.zip</url>
+                                <url>${chromedriver.url}/100.0.4896.60/chromedriver_${chromedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_chromedriver_100.0_chrome-100-101</outputDirectory>
                             </configuration>
                         </execution>
@@ -245,6 +245,18 @@
 						
 						<!-- Edge driver -->
 						<execution>
+                            <id>edgedriver 100.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/100.0.1185.23/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_100.0_edge-100-101</outputDirectory>
+                            </configuration>
+                        </execution>    
+						<execution>
                             <id>edgedriver 99.0</id>
                             <phase>generate-resources</phase>
                             <goals>
@@ -302,30 +314,6 @@
                                 <skip>${is.not.windows}</skip>
                                 <url>${edgedriver.url}/95.0.1020.20/edgedriver_${edgedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_edgedriver_95.0_edge-95-96</outputDirectory>
-                            </configuration>
-                        </execution>    
-						<execution>
-                            <id>edgedriver 93.0</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <skip>${is.not.windows}</skip>
-                                <url>${edgedriver.url}/93.0.961.27/edgedriver_${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_93.0_edge-93-94</outputDirectory>
-                            </configuration>
-                        </execution>						
-						<execution>
-                            <id>edgedriver 92.0</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <skip>${is.not.windows}</skip>
-                                <url>${edgedriver.url}/92.0.902.78/edgedriver_${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_92.0_edge-92-93</outputDirectory>
                             </configuration>
                         </execution>						
 					</executions>
