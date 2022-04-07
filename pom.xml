@@ -63,7 +63,8 @@
 		<chromedriver.url>https://chromedriver.storage.googleapis.com</chromedriver.url>
 		<geckodriver.url>https://github.com/mozilla/geckodriver/releases/download</geckodriver.url>
 		<iedriver.url>http://selenium-release.storage.googleapis.com</iedriver.url>
-		<edgedriver.url>https://msedgedriver.azureedge.net</edgedriver.url>
+		<!-- <edgedriver.url>https://msedgedriver.azureedge.net</edgedriver.url> root URL give all paths -->
+		<edgedriver.url>https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver</edgedriver.url> <!-- root URL give all paths -->
 		<chromedriver.suffix />
 		<geckodriver.suffix />
 		<geckodriver.ext />
@@ -102,6 +103,17 @@
 					<executions>
 
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
+						<execution>
+                            <id>chromedriver 101.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <url>${chromedriver.url}/101.0.4951.15/chromedriver_${chromedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_chromedriver_101.0_chrome-101-102</outputDirectory>
+                            </configuration>
+                        </execution>
 						<execution>
                             <id>chromedriver 100.0</id>
                             <phase>generate-resources</phase>
@@ -190,18 +202,6 @@
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_93.0_chrome-93-94</outputDirectory>
 							</configuration>
                         </execution>
-						<execution>
-							<id>chromedriver 92.0</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>wget</goal>
-							</goals>
-							<configuration>
-								<url>${chromedriver.url}/92.0.4515.107/chromedriver_${chromedriver.suffix}.zip</url>
-								<outputDirectory>${driver.path}${os}/dir_chromedriver_92.0_chrome-92-93</outputDirectory>
-							</configuration>
-                        </execution>
-						
 
 						<!-- GECKODRIVER -->
 						<execution>
