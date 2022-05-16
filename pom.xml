@@ -245,6 +245,18 @@
 						
 						<!-- Edge driver -->
 						<execution>
+                            <id>edgedriver 102.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>${edgedriver.url}/102.0.1245.12/edgedriver_${edgedriver.suffix}.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_edgedriver_102.0_edge-102-103</outputDirectory>
+                            </configuration>
+                        </execution>    
+						<execution>
                             <id>edgedriver 101.0</id>
                             <phase>generate-resources</phase>
                             <goals>
@@ -302,18 +314,6 @@
                                 <skip>${is.not.windows}</skip>
                                 <url>${edgedriver.url}/97.0.1072.54/edgedriver_${edgedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_edgedriver_97.0_edge-97-98</outputDirectory>
-                            </configuration>
-                        </execution>    
-						<execution>
-                            <id>edgedriver 96.0</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <skip>${is.not.windows}</skip>
-                                <url>${edgedriver.url}/96.0.1054.26/edgedriver_${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_96.0_edge-96-97</outputDirectory>
                             </configuration>
                         </execution>    						
 					</executions>
