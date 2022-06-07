@@ -3,7 +3,7 @@
 	 <groupId>com.infotel.seleniumRobot</groupId>
 	<artifactId>seleniumRobot-drivers</artifactId>
 	<packaging>pom</packaging>
-	<version>5.0.10-SNAPSHOT</version>
+	<version>5.0.11-SNAPSHOT</version>
 	
 	<name>seleniumRobot drivers</name>
 	<description>Drivers which must be deployed with seleniumRobot core or with seleniumRobot grid</description>
