@@ -205,46 +205,8 @@
                                 <outputDirectory>${driver.path}${os}/dir_chromedriver_103.0_chrome-103-104</outputDirectory>
                             </configuration>
                         </execution>
-                        <!-- GECKODRIVER -->
-                        <execution>
-                            <id>geckodriver 0.31.0</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${geckodriver.url}/v0.31.0/geckodriver-v0.31.0-${geckodriver.suffix}${geckodriver.ext}</url>
-                                <outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
-                            </configuration>
-                        </execution>
-
-                        <!-- IEDriverServer -->
-                        <execution>
-                            <id>IEDriverServer 64</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <skip>${is.not.windows}</skip>
-                                <url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_x64_4.2.0.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_IEDriverServer_x64</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>IEDriverServer 32</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <skip>${is.not.windows}</skip>
-                                <url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_Win32_4.2.0.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_IEDriverServer_Win32</outputDirectory>
-                            </configuration>
-                        </execution>
+                        
                         <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
-        
                         <execution>
                             <id>edgedriver 96</id>
                             <phase>generate-resources</phase>
@@ -344,7 +306,46 @@
                                 <outputDirectory>${driver.path}${os}/dir_edgedriver_104.0_edge-104-105</outputDirectory>
                             </configuration>
                         </execution>                     
-<!-- END_DRIVER_DEFINITION --> 						
+                        <!-- END_DRIVER_DEFINITION -->                      
+                        <!-- GECKODRIVER -->
+                        <execution>
+                            <id>geckodriver 0.31.0</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <url>${geckodriver.url}/v0.31.0/geckodriver-v0.31.0-${geckodriver.suffix}${geckodriver.ext}</url>
+                                <outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
+                            </configuration>
+                        </execution>
+
+                        <!-- IEDriverServer -->
+                        <execution>
+                            <id>IEDriverServer 64</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_x64_4.2.0.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_IEDriverServer_x64</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>IEDriverServer 32</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${is.not.windows}</skip>
+                                <url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_Win32_4.2.0.zip</url>
+                                <outputDirectory>${driver.path}${os}/dir_IEDriverServer_Win32</outputDirectory>
+                            </configuration>
+                        </execution>
+                        
 					</executions>
 				</plugin>
 				<plugin>
