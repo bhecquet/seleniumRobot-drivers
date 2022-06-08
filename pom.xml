@@ -103,7 +103,7 @@
 						<unpack>true</unpack>
 					</configuration>
 					<executions>
-
+                        <!-- BEGIN_DRIVER_DEFINITION -->
 						<!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
 						<execution>
                             <id>chromedriver 103.0</id>
@@ -207,13 +207,13 @@
 
 						<!-- GECKODRIVER -->
 						<execution>
-							<id>geckodriver 0.30.0</id>
+							<id>geckodriver 0.31.0</id>
 							<phase>generate-resources</phase>
 							<goals>
 								<goal>wget</goal>
 							</goals>
 							<configuration>
-								<url>${geckodriver.url}/v0.30.0/geckodriver-v0.30.0-${geckodriver.suffix}${geckodriver.ext}</url>
+								<url>${geckodriver.url}/v0.31.0/geckodriver-v0.31.0-${geckodriver.suffix}${geckodriver.ext}</url>
 								<outputDirectory>${driver.path}${os}/dir_geckodriver</outputDirectory>
 							</configuration>
 						</execution>
@@ -227,8 +227,7 @@
 							</goals>
 							<configuration>
 								<skip>${is.not.windows}</skip>
-								<!-- <url>${iedriver.url}/${selenium.version.short}/IEDriverServer_x64_${selenium.version.short}.0.zip</url>-->
-								<url>${iedriver.url}/3.141/IEDriverServer_x64_3.141.5.zip</url>
+								<url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_x64_4.2.0.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_IEDriverServer_x64</outputDirectory>
 							</configuration>
 						</execution>
@@ -240,7 +239,7 @@
 							</goals>
 							<configuration>
 								<skip>${is.not.windows}</skip>
-								<url>${iedriver.url}/3.141/IEDriverServer_Win32_3.141.5.zip</url>
+								<url>https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/IEDriverServer_Win32_4.2.0.zip</url>
 								<outputDirectory>${driver.path}${os}/dir_IEDriverServer_Win32</outputDirectory>
 							</configuration>
 						</execution>
@@ -329,7 +328,8 @@
                                 <url>${edgedriver.url}/97.0.1072.54/edgedriver_${edgedriver.suffix}.zip</url>
                                 <outputDirectory>${driver.path}${os}/dir_edgedriver_97.0_edge-97-98</outputDirectory>
                             </configuration>
-                        </execution>    						
+                        </execution>   
+                        <!-- END_DRIVER_DEFINITION --> 						
 					</executions>
 				</plugin>
 				<plugin>
