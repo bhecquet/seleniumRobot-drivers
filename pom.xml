@@ -104,208 +104,208 @@
 					</configuration>
 					<executions>
                         <!-- BEGIN_DRIVER_DEFINITION -->
-                        <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
-        
-                        <execution>
-                            <id>chromedriver 95</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/95.0.4638.69/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_95.0_chrome-95-96</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 96</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/96.0.4664.45/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_96.0_chrome-96-97</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 97</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/97.0.4692.71/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_97.0_chrome-97-98</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 98</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/98.0.4758.102/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_98.0_chrome-98-99</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 99</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/99.0.4844.51/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_99.0_chrome-99-100</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 100</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/100.0.4896.60/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_100.0_chrome-100-101</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 101</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/101.0.4951.41/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_101.0_chrome-101-102</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 102</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/102.0.5005.61/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_102.0_chrome-102-103</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>chromedriver 103</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${chromedriver.url}/103.0.5060.24/chromedriver_${chromedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_chromedriver_103.0_chrome-103-104</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
-        
-                        <execution>
-                            <id>edgedriver 96</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/96.0.1054.75/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_96.0_edge-96-97</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 97</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/97.0.1072.76/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_97.0_edge-97-98</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 98</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/98.0.1108.92/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_98.0_edge-98-99</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 99</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/99.0.1150.55/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_99.0_edge-99-100</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 100</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/100.0.1185.60/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_100.0_edge-100-101</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 101</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/101.0.1210.53/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_101.0_edge-101-102</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 102</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/102.0.1245.33/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_102.0_edge-102-103</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 103</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/103.0.1264.17/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_103.0_edge-103-104</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>edgedriver 104</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <configuration>
-                                <url>${edgedriver.url}/104.0.1278.2/edgedriver${edgedriver.suffix}.zip</url>
-                                <outputDirectory>${driver.path}${os}/dir_edgedriver_104.0_edge-104-105</outputDirectory>
-                            </configuration>
-                        </execution>                     
+                            <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
+            
+                            <execution>
+                                <id>chromedriver 95</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/95.0.4638.69/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_95.0_chrome-95-96</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 96</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/96.0.4664.45/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_96.0_chrome-96-97</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 97</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/97.0.4692.71/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_97.0_chrome-97-98</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 98</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/98.0.4758.102/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_98.0_chrome-98-99</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 99</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/99.0.4844.51/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_99.0_chrome-99-100</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 100</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/100.0.4896.60/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_100.0_chrome-100-101</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 101</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/101.0.4951.41/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_101.0_chrome-101-102</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 102</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/102.0.5005.61/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_102.0_chrome-102-103</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>chromedriver 103</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/103.0.5060.24/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_103.0_chrome-103-104</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
+            
+                            <execution>
+                                <id>edgedriver 96</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/96.0.1054.75/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_96.0_edge-96-97</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 97</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/97.0.1072.76/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_97.0_edge-97-98</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 98</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/98.0.1108.92/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_98.0_edge-98-99</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 99</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/99.0.1150.55/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_99.0_edge-99-100</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 100</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/100.0.1185.60/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_100.0_edge-100-101</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 101</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/101.0.1210.53/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_101.0_edge-101-102</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 102</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/102.0.1245.33/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_102.0_edge-102-103</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 103</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/103.0.1264.17/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_103.0_edge-103-104</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 104</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${edgedriver.url}/104.0.1278.2/edgedriver${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_104.0_edge-104-105</outputDirectory>
+                                </configuration>
+                            </execution>                     
 <!-- END_DRIVER_DEFINITION -->                      
                         <!-- GECKODRIVER -->
                         <execution>
