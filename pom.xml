@@ -190,7 +190,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/103.0.5060.53/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/103.0.5060.134/chromedriver_${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_103.0_chrome-103-104</outputDirectory>
                                 </configuration>
                             </execution>
@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/103.0.1264.49/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/103.0.1264.62/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_103.0_edge-103-104</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/104.0.1293.14/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/104.0.1293.25/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_104.0_edge-104-105</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/105.0.1319.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/105.0.1326.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_105.0_edge-105-106</outputDirectory>
                                 </configuration>
                             </execution>                     
