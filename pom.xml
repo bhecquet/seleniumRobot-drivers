@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/104.0.1293.47/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/104.0.1293.54/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_104.0_edge-104-105</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/105.0.1343.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/105.0.1343.7/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_105.0_edge-105-106</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/106.0.1346.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/106.0.1353.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_106.0_edge-106-107</outputDirectory>
                                 </configuration>
                             </execution>                     
