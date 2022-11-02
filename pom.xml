@@ -208,18 +208,6 @@
                             <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
             
                             <execution>
-                                <id>edgedriver 100</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>wget</goal>
-                                </goals>
-                                <configuration>
-                                    <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/100.0.1185.60/edgedriver_${edgedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_100.0_edge-100-101</outputDirectory>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>edgedriver 101</id>
                                 <phase>generate-resources</phase>
                                 <goals>
@@ -287,7 +275,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/106.0.1370.52/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/106.0.1370.61/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_106.0_edge-106-107</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/107.0.1418.20/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/107.0.1418.26/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_107.0_edge-107-108</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,8 +299,20 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/108.0.1461.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/108.0.1462.2/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_108.0_edge-108-109</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>edgedriver 109</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <skip>${is.not.windows}</skip>
+                                    <url>${edgedriver.url}/109.0.1477.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_edgedriver_109.0_edge-109-110</outputDirectory>
                                 </configuration>
                             </execution>                     
 <!-- END_DRIVER_DEFINITION -->                      
