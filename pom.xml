@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/110.0.1573.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/110.0.1586.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_110.0_edge-110-111</outputDirectory>
                                 </configuration>
                             </execution>                     
