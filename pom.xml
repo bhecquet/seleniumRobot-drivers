@@ -107,17 +107,6 @@
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
                             <execution>
-                                <id>chromedriver 102</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>wget</goal>
-                                </goals>
-                                <configuration>
-                                    <url>${chromedriver.url}/102.0.5005.61/chromedriver_${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_102.0_chrome-102-103</outputDirectory>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>chromedriver 103</id>
                                 <phase>generate-resources</phase>
                                 <goals>
@@ -205,6 +194,17 @@
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_110.0_chrome-110-111</outputDirectory>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>chromedriver 111</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/111.0.5563.19/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_111.0_chrome-111-112</outputDirectory>
+                                </configuration>
+                            </execution>
                             <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
             
                             <execution>
@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/110.0.1587.35/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/110.0.1587.46/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_110.0_edge-110-111</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/111.0.1660.6/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/111.0.1660.12/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_111.0_edge-111-112</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/112.0.1670.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/112.0.1683.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_112.0_edge-112-113</outputDirectory>
                                 </configuration>
                             </execution>                     
