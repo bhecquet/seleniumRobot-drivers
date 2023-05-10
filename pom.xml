@@ -107,17 +107,6 @@
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
                             <execution>
-                                <id>chromedriver 105</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>wget</goal>
-                                </goals>
-                                <configuration>
-                                    <url>${chromedriver.url}/105.0.5195.52/chromedriver_${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_105.0_chrome-105-106</outputDirectory>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>chromedriver 106</id>
                                 <phase>generate-resources</phase>
                                 <goals>
@@ -205,6 +194,17 @@
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_113.0_chrome-113-114</outputDirectory>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>chromedriver 114</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>${chromedriver.url}/114.0.5735.16/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_114.0_chrome-114-115</outputDirectory>
+                                </configuration>
+                            </execution>
                             <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
             
                             <execution>
@@ -275,7 +275,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/112.0.1722.68/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/112.0.1722.77/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_112.0_edge-112-113</outputDirectory>
                                 </configuration>
                             </execution>
@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/113.0.1774.27/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/113.0.1774.35/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_113.0_edge-113-114</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/114.0.1807.6/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/114.0.1823.11/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_114.0_edge-114-115</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/115.0.1832.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/115.0.1846.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_115.0_edge-115-116</outputDirectory>
                                 </configuration>
                             </execution>                     
