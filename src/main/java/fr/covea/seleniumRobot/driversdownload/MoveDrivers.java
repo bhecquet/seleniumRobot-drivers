@@ -36,9 +36,17 @@ public class MoveDrivers {
 		for (String driverDir: new File(root + os).list()) {
 			if (driverDir.contains("chromedriver") && Paths.get(root, os, driverDir).toFile().isDirectory()) {
 				System.out.println("moving driver " + driverDir);
-				Files.copy(Paths.get(root, os, driverDir, "chromedriver" + extension), 
-							Paths.get(root, os, driverDir.replace("dir_", "") + extension), 
+				if (Paths.get(root, os, driverDir, "chromedriver" + extension).toFile().exists()) {
+					Files.copy(Paths.get(root, os, driverDir, "chromedriver" + extension),
+							Paths.get(root, os, driverDir.replace("dir_", "") + extension),
 							StandardCopyOption.REPLACE_EXISTING);
+				} else {
+					String subfolder = Paths.get(root, os, driverDir).toFile().list()[0];
+					// chromedriver from 'chrome-for-testing'
+					Files.copy(Paths.get(root, os, driverDir, subfolder, "chromedriver" + extension),
+							Paths.get(root, os, driverDir.replace("dir_", "") + extension),
+							StandardCopyOption.REPLACE_EXISTING);
+				}
 				FileUtils.deleteDirectory(Paths.get(root, os, driverDir).toFile());
 			}
 			else if (driverDir.contains("geckodriver") && Paths.get(root, os, driverDir).toFile().isDirectory()) {
