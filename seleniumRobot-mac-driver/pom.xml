@@ -10,7 +10,8 @@
 	<properties>
 		<os>mac</os>
 		<is.not.windows>true</is.not.windows>
-		<chromedriver.suffix>mac64</chromedriver.suffix>
+		<oldchromedriver.suffix>mac64</oldchromedriver.suffix>
+		<chromedriver.suffix>mac-x64</chromedriver.suffix>
 		<geckodriver.suffix>macos</geckodriver.suffix>
 		<geckodriver.ext>.tar.gz</geckodriver.ext>
 		<skip.clean.driver>true</skip.clean.driver>
@@ -18,19 +19,6 @@
 	</properties>
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>com.googlecode.maven-download-plugin</groupId>
-				<artifactId>download-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>chromedriver 2.20</id>
-						<!-- suffix was mac32 for older releases -->
-						<configuration>
-							<url>${chromedriver.url}/2.20/chromedriver_mac32.zip</url>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

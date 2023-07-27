@@ -10,6 +10,7 @@
 	<properties>
 		<os>windows</os>
 		<is.not.windows>false</is.not.windows>
+		<oldchromedriver.suffix>win32</oldchromedriver.suffix>
 		<chromedriver.suffix>win32</chromedriver.suffix>
 		<edgedriver.suffix>win64</edgedriver.suffix>
 		<geckodriver.suffix>win64</geckodriver.suffix>

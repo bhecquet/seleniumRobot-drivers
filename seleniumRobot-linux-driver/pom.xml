@@ -10,6 +10,7 @@
 	<properties>
 		<os>linux</os>
 		<is.not.windows>true</is.not.windows>
+		<oldchromedriver.suffix>linux64</oldchromedriver.suffix>
 		<chromedriver.suffix>linux64</chromedriver.suffix>
 		<geckodriver.suffix>linux64</geckodriver.suffix>
 		<geckodriver.ext>.tar.gz</geckodriver.ext>
