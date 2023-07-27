@@ -107,36 +107,36 @@
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
                             <execution>
-                                <id>chromedriver 106</id>
+                                <id>chromedriver 117</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/106.0.5249.61/chromedriver_${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_106.0_chrome-106-107</outputDirectory>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5912.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_117.0_chrome-117-1171</outputDirectory>
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>chromedriver 107</id>
+                                <id>chromedriver 116</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/107.0.5304.62/chromedriver_${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_107.0_chrome-107-108</outputDirectory>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.49/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_116.0_chrome-116-1161</outputDirectory>
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>chromedriver 108</id>
+                                <id>chromedriver 115</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/108.0.5359.71/chromedriver_${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_108.0_chrome-108-109</outputDirectory>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.102/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_115.0_chrome-115-1151</outputDirectory>
                                 </configuration>
                             </execution>
                             <execution>
@@ -146,7 +146,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/109.0.5414.74/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/109.0.5414.74/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_109.0_chrome-109-110</outputDirectory>
                                 </configuration>
                             </execution>
@@ -157,7 +157,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/110.0.5481.77/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/110.0.5481.77/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_110.0_chrome-110-111</outputDirectory>
                                 </configuration>
                             </execution>
@@ -168,7 +168,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/111.0.5563.64/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/111.0.5563.64/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_111.0_chrome-111-112</outputDirectory>
                                 </configuration>
                             </execution>
@@ -179,7 +179,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/112.0.5615.49/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/112.0.5615.49/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_112.0_chrome-112-113</outputDirectory>
                                 </configuration>
                             </execution>
@@ -190,7 +190,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/113.0.5672.63/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/113.0.5672.63/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_113.0_chrome-113-114</outputDirectory>
                                 </configuration>
                             </execution>
@@ -201,7 +201,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>${chromedriver.url}/114.0.5735.90/chromedriver_${chromedriver.suffix}.zip</url>
+                                    <url>${chromedriver.url}/114.0.5735.90/chromedriver_${oldchromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_114.0_chrome-114-115</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/117.0.1991.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/117.0.2005.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_117.0_edge-117-118</outputDirectory>
                                 </configuration>
                             </execution>                     
