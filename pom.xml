@@ -113,7 +113,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5979.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5980.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_118.0_chrome-118-119</outputDirectory>
                                 </configuration>
                             </execution>
@@ -124,7 +124,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.35/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_117.0_chrome-117-118</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/118.0.2070.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/118.0.2071.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_118.0_edge-118-119</outputDirectory>
                                 </configuration>
                             </execution>                     
