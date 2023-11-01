@@ -113,7 +113,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6087.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.2/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_120.0_chrome-120-121</outputDirectory>
                                 </configuration>
                             </execution>
@@ -124,7 +124,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.21/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_119.0_chrome-119-120</outputDirectory>
                                 </configuration>
                             </execution>
@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/118.0.2088.69/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/118.0.2088.76/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_118.0_edge-118-119</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/119.0.2151.24/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/119.0.2151.38/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_119.0_edge-119-120</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/120.0.2173.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/120.0.2186.2/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_120.0_edge-120-121</outputDirectory>
                                 </configuration>
                             </execution>                     
