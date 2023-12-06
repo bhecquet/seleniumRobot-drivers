@@ -107,13 +107,24 @@
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
                             <execution>
+                                <id>chromedriver 122</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/122.0.6168.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_122.0_chrome-122-123</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
                                 <id>chromedriver 121</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/121.0.6154.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/121.0.6167.2/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_121.0_chrome-121-122</outputDirectory>
                                 </configuration>
                             </execution>
@@ -124,7 +135,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.35/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.62/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_120.0_chrome-120-121</outputDirectory>
                                 </configuration>
                             </execution>
@@ -181,17 +192,6 @@
                                 <configuration>
                                     <url>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.170/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_115.0_chrome-115-116</outputDirectory>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>chromedriver 113</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>wget</goal>
-                                </goals>
-                                <configuration>
-                                    <url>${chromedriver.url}/113.0.5672.63/chromedriver_${oldchromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_113.0_chrome-113-114</outputDirectory>
                                 </configuration>
                             </execution>
                             <execution>
@@ -275,7 +275,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/118.0.2088.109/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/118.0.2088.122/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_118.0_edge-118-119</outputDirectory>
                                 </configuration>
                             </execution>
@@ -287,7 +287,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/119.0.2151.93/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/119.0.2151.97/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_119.0_edge-119-120</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/120.0.2210.39/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/120.0.2210.49/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_120.0_edge-120-121</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/121.0.2252.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/121.0.2265.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_121.0_edge-121-122</outputDirectory>
                                 </configuration>
                             </execution>                     
