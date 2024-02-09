@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.infotel.seleniumRobot</groupId>
 		<artifactId>seleniumRobot-drivers</artifactId>
-		<version>5.0.52-SNAPSHOT</version>
+		<version>5.1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>seleniumRobot-mac-driver</artifactId>
 

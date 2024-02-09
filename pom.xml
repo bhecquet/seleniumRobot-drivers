@@ -3,7 +3,7 @@
 	 <groupId>com.infotel.seleniumRobot</groupId>
 	<artifactId>seleniumRobot-drivers</artifactId>
 	<packaging>pom</packaging>
-	<version>5.0.52-SNAPSHOT</version>
+	<version>5.1.0-SNAPSHOT</version>
 	
 	<name>seleniumRobot drivers</name>
 	<description>Drivers which must be deployed with seleniumRobot core or with seleniumRobot grid</description>
@@ -103,6 +103,18 @@
 						<unpack>true</unpack>
 					</configuration>
 					<executions>
+						<!-- Chrome version for Android 14 -->
+						<execution>
+							<id>chromedriver 113</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>wget</goal>
+							</goals>
+							<configuration>
+								<url>${chromedriver.url}/113.0.5672.63/chromedriver_${oldchromedriver.suffix}.zip</url>
+								<outputDirectory>${driver.path}${os}/dir_chromedriver_113.0_chrome-113-114</outputDirectory>
+							</configuration>
+						</execution>
                         <!-- BEGIN_DRIVER_DEFINITION -->
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
@@ -399,6 +411,9 @@
 	                			<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 							</manifest>
 						</archive>
+						<excludes>
+							<exclude>**/driversdownload/*</exclude>
+						</excludes>
 					</configuration>
 					<executions>
 						<execution>
