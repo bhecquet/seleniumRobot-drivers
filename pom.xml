@@ -125,7 +125,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//126.0.6437.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//126.0.6449.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_126.0_chrome-126-127</outputDirectory>
                                 </configuration>
                             </execution>
@@ -136,7 +136,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//125.0.6422.4/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//125.0.6422.14/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_125.0_chrome-125-126</outputDirectory>
                                 </configuration>
                             </execution>
@@ -147,7 +147,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//124.0.6367.78/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//124.0.6367.91/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_124.0_chrome-124-125</outputDirectory>
                                 </configuration>
                             </execution>
@@ -299,7 +299,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/124.0.2478.51/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/124.0.2478.67/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_124.0_edge-124-125</outputDirectory>
                                 </configuration>
                             </execution>
@@ -311,7 +311,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/125.0.2532.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/125.0.2535.13/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_125.0_edge-125-126</outputDirectory>
                                 </configuration>
                             </execution>
@@ -323,7 +323,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/126.0.2544.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/126.0.2559.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_126.0_edge-126-127</outputDirectory>
                                 </configuration>
                             </execution>                     
