@@ -115,6 +115,17 @@
 								<outputDirectory>${driver.path}${os}/dir_chromedriver_113.0_chrome-113-114</outputDirectory>
 							</configuration>
 						</execution>
+					<execution>
+		                                <id>chromedriver 120</id>
+		                                <phase>generate-resources</phase>
+		                                <goals>
+		                                    <goal>wget</goal>
+		                                </goals>
+		                                <configuration>
+		                                    <url>https://storage.googleapis.com/chrome-for-testing-public//120.0.6099.109/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+		                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_120.0_chrome-120-121</outputDirectory>
+		                                </configuration>
+		                            </execution>
                         <!-- BEGIN_DRIVER_DEFINITION -->
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
