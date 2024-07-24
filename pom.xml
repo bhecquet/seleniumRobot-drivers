@@ -130,13 +130,24 @@
                             <!-- CHROMEDRIVER: pattern for file MUST BE chromedriver_<version>_chrome-<minChromeVersion>-<maxChromeVersion> -->
             
                             <execution>
+                                <id>chromedriver 129</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//129.0.6614.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_129.0_chrome-129-130</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <execution>
                                 <id>chromedriver 128</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//128.0.6601.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//128.0.6613.5/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_128.0_chrome-128-129</outputDirectory>
                                 </configuration>
                             </execution>
@@ -147,7 +158,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//127.0.6533.43/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//127.0.6533.72/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_127.0_chrome-127-128</outputDirectory>
                                 </configuration>
                             </execution>
@@ -215,17 +226,6 @@
                                 <configuration>
                                     <url>https://storage.googleapis.com/chrome-for-testing-public//121.0.6167.184/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_121.0_chrome-121-122</outputDirectory>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>chromedriver 120</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>wget</goal>
-                                </goals>
-                                <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//120.0.6099.109/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
-                                    <outputDirectory>${driver.path}${os}/dir_chromedriver_120.0_chrome-120-121</outputDirectory>
                                 </configuration>
                             </execution>
                             <!-- EDGEDRIVER: pattern for file MUST BE edgedriver_<version>_edge-<minEdgeVersion>-<maxEdgeVersion> -->
@@ -310,7 +310,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/126.0.2592.102/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/126.0.2592.113/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_126.0_edge-126-127</outputDirectory>
                                 </configuration>
                             </execution>
