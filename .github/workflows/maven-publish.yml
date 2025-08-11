@@ -3,11 +3,10 @@
 
 name: Publish release
 
-on: workflow_dispatch
-  #release:
-  #  types: [created]
-    
-  
+on: 
+  workflow_dispatch:
+  schedule:
+  - cron: "0 9 9,23 * *" 
 
 jobs:
   build:
