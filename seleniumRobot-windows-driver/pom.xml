@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.infotel.seleniumRobot</groupId>
 		<artifactId>seleniumRobot-drivers</artifactId>
-		<version>5.1.37-SNAPSHOT</version>
+		<version>5.1.37</version>
 	</parent>
 	<artifactId>seleniumRobot-windows-driver</artifactId>
 	<name>seleniumRobot drivers windows</name>
