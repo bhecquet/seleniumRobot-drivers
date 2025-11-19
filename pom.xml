@@ -136,7 +136,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//144.0.7524.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//144.0.7531.0/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_144.0_chrome-144-145</outputDirectory>
                                 </configuration>
                             </execution>
@@ -147,7 +147,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//143.0.7499.17/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//143.0.7499.25/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_143.0_chrome-143-144</outputDirectory>
                                 </configuration>
                             </execution>
@@ -158,7 +158,7 @@
                                     <goal>wget</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://storage.googleapis.com/chrome-for-testing-public//142.0.7444.162/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
+                                    <url>https://storage.googleapis.com/chrome-for-testing-public//142.0.7444.175/${chromedriver.suffix}/chromedriver-${chromedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_chromedriver_142.0_chrome-142-143</outputDirectory>
                                 </configuration>
                             </execution>
@@ -310,7 +310,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/142.0.3595.76/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/142.0.3595.90/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_142.0_edge-142-143</outputDirectory>
                                 </configuration>
                             </execution>
@@ -322,7 +322,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/143.0.3650.15/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/143.0.3650.28/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_143.0_edge-143-144</outputDirectory>
                                 </configuration>
                             </execution>
@@ -334,7 +334,7 @@
                                 </goals>
                                 <configuration>
                                     <skip>${is.not.windows}</skip>
-                                    <url>${edgedriver.url}/144.0.3673.0/edgedriver_${edgedriver.suffix}.zip</url>
+                                    <url>${edgedriver.url}/144.0.3687.0/edgedriver_${edgedriver.suffix}.zip</url>
                                     <outputDirectory>${driver.path}${os}/dir_edgedriver_144.0_edge-144-145</outputDirectory>
                                 </configuration>
                             </execution>                     
