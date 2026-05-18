@@ -66,7 +66,7 @@
 		<geckodriver.url>https://github.com/mozilla/geckodriver/releases/download</geckodriver.url>
 		<iedriver.url>http://selenium-release.storage.googleapis.com</iedriver.url>
 		<!-- <edgedriver.url>https://msedgedriver.azureedge.net</edgedriver.url> root URL give all paths -->
-		<edgedriver.url>https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver</edgedriver.url> <!-- root URL give all paths -->
+		<edgedriver.url>https://msedgedriver.microsoft.com</edgedriver.url> <!-- root URL give all paths -->
 		<chromedriver.suffix />
 		<geckodriver.suffix />
 		<geckodriver.ext />
